@@ -1,0 +1,95 @@
+/* .customer {
+  display: block;
+} */
+
+.customer__form {
+  display: block;
+}
+
+.customer__form h1 {
+  font-weight: bold;
+  font-size: calc(12px + 1.3vw);
+}
+
+.customer__form form {
+  padding: 20px;
+  background-color: #fff;
+  font-size: calc(12px + 0.1vw);
+  border: 2px solid rgb(236, 241, 249);
+  display: inline-block;
+}
+
+.customer__formLineOne {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.customer__formLineTwo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.customer__formName,
+.customer__formPhone,
+.customer__formEmail {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer__formName,
+.customer__formEmail {
+  margin-right: 20px;
+}
+
+.customer__formName input,
+.customer__formPhone input,
+.customer__formEmail input {
+  height: 37px;
+  width: 300px;
+  margin-right: 30px;
+  padding: 0px 5px;
+  border: 2px solid rgb(236, 241, 249);
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: rgb(86, 85, 208);
+  color: rgba(255, 255, 255, 0.93);
+  padding: 1%;
+  border-radius: 5px;
+  border: none;
+  min-width: 150px;
+  min-height: 37px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  transition: all 0.25s ease-in-out;
+}
+
+.customer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customer__header h1 {
+  font-weight: bold;
+  font-size: calc(12px + 1.3vw);
+}
+
+.customer__header button {
+  background-color: rgb(84, 86, 208);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-size: calc(7px + 0.3vw);
+}
+
+.customer__content {
+  display: grid;
+  place-items: center;
+}
