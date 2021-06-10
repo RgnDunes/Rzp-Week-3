@@ -3,7 +3,6 @@ import "./Customer.css";
 
 import Loader from "../../Components/Loader/Loader";
 import timestampConversion from "../../utils";
-// import Button from "../../Components/Button/Button";
 
 const customer = ({ customersData, customerLoader, fetchCustomers }) => {
   const [newCustomerForm, setNewCustomerForm] = useState(false);
@@ -84,7 +83,7 @@ const customer = ({ customersData, customerLoader, fetchCustomers }) => {
               <input
                 type="submit"
                 onClick={(e) => handleformSubmit(e)}
-                value="💾 Save Customer"
+                value="Save Customer"
               />
             </div>
           </form>

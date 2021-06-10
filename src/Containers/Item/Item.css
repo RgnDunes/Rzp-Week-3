@@ -1,21 +1,13 @@
-/* .item {
-  display: block;
-} */
-
 .item__form {
   display: block;
 }
 
 .item__form h1 {
   font-weight: bold;
-  font-size: calc(12px + 1.3vw);
 }
 
 .item__form form {
-  display: inline-block;
   background-color: #fff;
-  padding: 20px;
-  font-size: calc(12px + 0.1vw);
   border: 2px solid rgb(236, 241, 249);
 }
 
@@ -24,34 +16,30 @@
 .item__formDesc {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
   margin-bottom: 15px;
+  justify-content: start;
 }
 
 .item__formName input,
 .item__formPrice input,
 .item__formDesc textarea {
-  height: 37px;
-  width: 300px;
+  flex: 1;
   margin-right: 30px;
-  padding: 0px 5px;
+  padding: 1.5% 2%;
   border: 2px solid rgb(236, 241, 249);
-  border-radius: 5px;
+  border-radius: 2%;
 }
 
 input[type="submit"] {
   background-color: rgb(86, 85, 208);
   color: rgba(255, 255, 255, 0.93);
-  padding: 1%;
   border-radius: 5px;
   border: none;
-  min-width: 150px;
-  min-height: 37px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
   transition: all 0.25s ease-in-out;
 }
 
@@ -63,7 +51,6 @@ input[type="submit"] {
 
 .item__header h1 {
   font-weight: bold;
-  font-size: calc(12px + 1.3vw);
 }
 
 .item__header button {
@@ -73,5 +60,185 @@ input[type="submit"] {
   border: none;
   padding: 7px 13px;
   border-radius: 3px;
-  font-size: calc(7px + 0.3vw);
+}
+
+textarea {
+  width: initial !important;
+  height: initial !important;
+}
+
+@media (min-width: 840px) {
+  .item__header h1,
+  .item__form h1 {
+    font-size: 160%;
+  }
+  .item__header button {
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 696px) and (max-width: 839px) {
+  .item__header h1,
+  .item__form h1 {
+    font-size: 140%;
+  }
+  .item__header button {
+    font-size: 70%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 695px) {
+  .item__header h1,
+  .item__form h1 {
+    font-size: 120%;
+  }
+  .item__header button {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 499px) {
+  .item__header h1,
+  .item__form h1 {
+    font-size: 100%;
+  }
+  .item__header button {
+    font-size: 30%;
+  }
+}
+
+@media (max-width: 299px) {
+  .item__header h1,
+  .item__form h1 {
+    font-size: 80%;
+  }
+  .item__header button {
+    font-size: 20%;
+  }
+}
+
+@media (min-width: 970px) {
+  .item__form form {
+    font-size: 90%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .item__formName input,
+  .item__formPrice input,
+  .item__formDesc textarea {
+    font-size: 100% !important;
+  }
+  input[type="submit"] {
+    font-size: 100% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 969px) {
+  .item__form form {
+    font-size: 80%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .item__formName input,
+  .item__formPrice input,
+  .item__formDesc textarea {
+    font-size: 100% !important;
+  }
+  input[type="submit"] {
+    font-size: 100% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+  .item__form form {
+    font-size: 70%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .item__formName input,
+  .item__formPrice input,
+  .item__formDesc textarea {
+    font-size: 100% !important;
+  }
+  input[type="submit"] {
+    font-size: 90% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+  .item__form form {
+    font-size: 60%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .item__formName input,
+  .item__formPrice input,
+  .item__formDesc textarea {
+    font-size: 90% !important;
+  }
+  input[type="submit"] {
+    font-size: 80% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 499px) {
+  .item__form form {
+    font-size: 50%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 90%;
+    display: inline-block;
+  }
+  .item__formName input,
+  .item__formPrice input,
+  .item__formDesc textarea {
+    font-size: 70% !important;
+  }
+  input[type="submit"] {
+    font-size: 70% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 359px) {
+  .item__form form {
+    font-size: 35%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .item__formName input,
+  .item__formPrice input,
+  .item__formDesc textarea {
+    font-size: 35% !important;
+  }
+  input[type="submit"] {
+    font-size: 50% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
 }

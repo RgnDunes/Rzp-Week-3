@@ -8,7 +8,6 @@
 
 .invoice__form form h1 {
   font-weight: bold;
-  font-size: calc(12px + 1.3vw);
 }
 
 .invoice__form form {
@@ -16,7 +15,6 @@
   flex-direction: column;
   padding: 20px;
   justify-content: flex-start;
-  font-size: calc(12px + 0.1vw);
 }
 
 .invoice__header {
@@ -27,7 +25,6 @@
 
 .invoice__header h1 {
   font-weight: bold;
-  font-size: calc(12px + 1.3vw);
 }
 
 .invoice__header button {
@@ -37,7 +34,6 @@
   border: none;
   padding: 7px 13px;
   border-radius: 3px;
-  font-size: calc(7px + 0.3vw);
 }
 
 .invoice__formHeader {
@@ -45,26 +41,22 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 25px;
+  width: 100%;
 }
 
 .invoice__formHeader h1 {
   font-weight: bold;
-  font-size: calc(12px + 1.3vw);
 }
 
 input[type="submit"] {
   background-color: rgb(86, 85, 208);
   color: rgba(255, 255, 255, 0.93);
-  padding: 1%;
-  border-radius: 5px;
+  border-radius: 5%;
   border: none;
-  min-width: 150px;
-  min-height: 37px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
   transition: all 0.25s ease-in-out;
 }
 
@@ -73,10 +65,11 @@ input[type="submit"] {
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 35px;
+  width: 100%;
 }
 
 .invoice__formRow:not(:last-child) {
-  padding-bottom: 50px;
+  padding-bottom: 5%;
   border-bottom: 2px solid rgb(236, 241, 249);
 }
 
@@ -85,6 +78,7 @@ input[type="submit"] {
   align-items: flex-start;
   flex-direction: column;
   justify-content: space-evenly;
+  flex: 0.3;
 }
 
 .invoice__formData {
@@ -96,7 +90,6 @@ input[type="submit"] {
 .invoice__form input,
 textarea {
   border: 1px solid lightgray;
-  padding: 7px 13px;
 }
 
 .invoice__formTable {
@@ -119,17 +112,20 @@ textarea {
   border-radius: 2px;
 }
 
-textarea {
-  width: 350px;
-  height: 100px;
+.custBill__desc {
+  flex: 0.4;
+}
+
+.custBill__desc textarea {
+  width: 100% !important;
+  height: 120% !important;
+  padding: 2%;
 }
 
 .invoice__custBill {
   display: inline-block;
   background-color: #fff;
-  padding: 0 20px 20px 20px;
-  width: 300px;
-  height: 100px;
+  padding: 0 2% 2% 2%;
   border: 2px solid rgb(236, 241, 249);
 }
 
@@ -151,9 +147,9 @@ textarea {
 .invoice__totalBill {
   display: flex;
   flex-direction: column;
-  width: 55%;
-  height: 125px;
-  padding: 20px;
+  flex: 0.6;
+  padding: 2%;
+  height: 140% !important;
   background-color: #fff;
   border: 1px solid lightblue;
   overflow: auto;
@@ -181,4 +177,183 @@ select {
   padding: 5px;
   outline: none;
   border: none;
+}
+
+@media (min-width: 840px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 160%;
+  }
+  .invoice__header button {
+    font-size: 90%;
+  }
+  input[type="submit"] {
+    font-size: 90% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 696px) and (max-width: 839px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 140%;
+  }
+  .invoice__header button {
+    font-size: 70%;
+  }
+  input[type="submit"] {
+    font-size: 70% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 695px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 120%;
+  }
+  .invoice__header button {
+    font-size: 50%;
+  }
+  input[type="submit"] {
+    font-size: 50% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 499px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 100%;
+  }
+  .invoice__header button {
+    font-size: 30%;
+  }
+  input[type="submit"] {
+    font-size: 30% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (max-width: 299px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 80%;
+  }
+  .invoice__header button {
+    font-size: 20%;
+  }
+  input[type="submit"] {
+    font-size: 20% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 970px) {
+  .invoice__form form {
+    font-size: 90% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 90% !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 969px) {
+  .invoice__form form {
+    font-size: 90% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 90% !important;
+  }
+  .total__amountLeft,
+  .total__amountRight {
+    font-size: 90% !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+  .invoice__form form {
+    font-size: 80% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 70% !important;
+  }
+}
+
+@media (min-width: 514px) and (max-width: 599px) {
+  .invoice__form form {
+    font-size: 65% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 60% !important;
+  }
+  .custBill__optionLeft {
+    font-size: 60% !important;
+  }
+  .custBill__optionRight,
+  .custBill__header {
+    font-size: 60% !important;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 513px) {
+  .invoice__form form {
+    font-size: 55% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 50% !important;
+  }
+  .custBill__optionLeft {
+    font-size: 50% !important;
+  }
+  .custBill__optionRight,
+  .custBill__header,
+  .invoice__formData {
+    font-size: 40% !important;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 359px) {
+  .invoice__form form {
+    font-size: 50% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 40% !important;
+  }
+  .custBill__optionLeft {
+    font-size: 40% !important;
+  }
+  .custBill__optionRight,
+  .custBill__header,
+  .invoice__formData {
+    font-size: 30% !important;
+  }
 }

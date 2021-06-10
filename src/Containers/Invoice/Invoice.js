@@ -285,7 +285,7 @@ const invoice = ({
             </div>
 
             <div class="invoice__formRow">
-              <div class="invoice__formRowCols">
+              <div class="invoice__formRowCols custBill__desc">
                 <label for="notes">Notes</label>
                 <textarea
                   name="notes"
