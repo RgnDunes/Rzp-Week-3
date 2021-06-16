@@ -51,6 +51,12 @@
   padding: 2%;
 }
 
+.customer__formName input:focus,
+.customer__formPhone input:focus,
+.customer__formEmail input:focus {
+  outline: none;
+}
+
 input[type="submit"] {
   background-color: rgb(86, 85, 208);
   color: rgba(255, 255, 255, 0.93);
@@ -259,4 +265,20 @@ input[type="submit"] {
     min-width: initial !important;
     min-height: initial !important;
   }
+}
+
+.validInput {
+  /* border: 2px solid green !important; */
+  outline: none;
+  color: green;
+}
+
+.invalidInput {
+  /* border: 2px solid red !important; */
+  outline: none;
+  color: red;
+}
+
+.errorMessage {
+  color: red;
 }
