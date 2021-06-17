@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Customer.css";
 
+import FormNotification from "../../Components/FormNotification/FormNotification";
 import Loader from "../../Components/Loader/Loader";
 import timestampConversion from "../../utils";
 
@@ -12,6 +13,8 @@ const customer = ({ customersData, customerLoader, fetchCustomers }) => {
   const [validContact, setValidContact] = useState(false);
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
+  const [dataSavedSuccess, setDataSavedSuccess] = useState(false);
+  const [dataSavedError, setDataSavedError] = useState(false);
 
   const checkCustomerNameValidation = () => {
     var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
@@ -56,6 +59,9 @@ const customer = ({ customersData, customerLoader, fetchCustomers }) => {
 
   const handleformSubmit = (e) => {
     e.preventDefault();
+    // checkCustomerNameValidation();
+    // checkEmailValidation();
+    // checkContactValidation();
     if (validName && validEmail && validContact) {
       fetch("https://rzp-training.herokuapp.com/team2/customers", {
         method: "POST",
@@ -70,27 +76,21 @@ const customer = ({ customersData, customerLoader, fetchCustomers }) => {
       })
         .then((response) => {
           fetchCustomers();
+          setName("");
+          setEmail("");
+          setContact("");
           setNewCustomerForm(!newCustomerForm);
           return response.json();
         })
         .then((json) => console.log());
 
-      var today = new Date();
-      var dd = String(today.getDate()).padStart(2, "0");
-      var mm = String(today.getMonth() + 1).padStart(2, "0");
-      var yyyy = today.getFullYear();
-      today = dd + "/" + mm + "/" + yyyy;
-      let todaysDate = new Date(today);
-      let timestamp =
-        Date.UTC(todaysDate.getFullYear(), todaysDate.getMonth() + 1, 0) / 1000;
-      let val = {
-        name: name,
-        contact: contact,
-        email: email,
-        created_at: timestamp,
-      };
+      setDataSavedError(false);
+      setDataSavedSuccess(true);
+      setTimeout(() => {
+        setDataSavedSuccess(false);
+      }, 1000);
     } else {
-      alert("Please enter valid details .");
+      setDataSavedError(true);
     }
   };
 
@@ -99,6 +99,11 @@ const customer = ({ customersData, customerLoader, fetchCustomers }) => {
       {newCustomerForm && (
         <div className="customer__form">
           <h1 data-testid="custFormHeader">New Customer</h1>
+          <FormNotification
+            dataSavedError={dataSavedError}
+            dataSavedSuccess={dataSavedSuccess}
+          />
+
           <form action="#">
             <div className="customer__formLineOne">
               <div className="customer__formName">
