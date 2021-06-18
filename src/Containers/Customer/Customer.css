@@ -282,3 +282,8 @@ input[type="submit"] {
 .errorMessage {
   color: red;
 }
+
+.submitBtnDisabled {
+  background-color: lightgray !important;
+  cursor: not-allowed !important;
+}

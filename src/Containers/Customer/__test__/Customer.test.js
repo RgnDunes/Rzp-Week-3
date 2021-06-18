@@ -3,10 +3,6 @@ import Customer from "../Customer";
 import { render, fireEvent, cleanup, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
-// afterEach(() => {
-//   cleanup(); //gets specified by default
-// });
-
 describe("Customer Component", () => {
   const checkCustomerNameValidation = (name) => {
     var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;

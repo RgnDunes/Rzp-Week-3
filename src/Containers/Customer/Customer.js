@@ -15,6 +15,7 @@ const customer = ({ customersData, customerLoader, fetchCustomers }) => {
   const [validEmail, setValidEmail] = useState(false);
   const [dataSavedSuccess, setDataSavedSuccess] = useState(false);
   const [dataSavedError, setDataSavedError] = useState(false);
+  const [formValid, setFormValid] = useState(false);
 
   const checkCustomerNameValidation = () => {
     var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
@@ -59,9 +60,6 @@ const customer = ({ customersData, customerLoader, fetchCustomers }) => {
 
   const handleformSubmit = (e) => {
     e.preventDefault();
-    // checkCustomerNameValidation();
-    // checkEmailValidation();
-    // checkContactValidation();
     if (validName && validEmail && validContact) {
       fetch("https://rzp-training.herokuapp.com/team2/customers", {
         method: "POST",
@@ -181,6 +179,12 @@ const customer = ({ customersData, customerLoader, fetchCustomers }) => {
                 data-testid="newCustSubmitBtn"
                 type="submit"
                 onClick={(e) => handleformSubmit(e)}
+                disabled={!(validName && validEmail && validContact)}
+                className={`${
+                  !(validName && validEmail && validContact)
+                    ? "submitBtnDisabled"
+                    : ""
+                }`}
                 value="Save Customer"
               />
             </div>
