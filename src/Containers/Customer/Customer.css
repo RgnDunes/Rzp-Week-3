@@ -1,0 +1,289 @@
+.customer__form {
+  display: block;
+}
+
+.customer__form h1 {
+  font-weight: bold;
+}
+
+.customer__form form {
+  background-color: #fff;
+  border: 2px solid rgb(236, 241, 249);
+}
+
+.customer__formLineOne {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.customer__formLineTwo {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.customer__formName,
+.customer__formPhone {
+  display: flex;
+  flex-direction: column;
+  flex: 0.5;
+}
+
+.customer__formEmail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.customer__formName,
+.customer__formEmail {
+  margin-right: 20px;
+}
+
+.customer__formName input,
+.customer__formPhone input,
+.customer__formEmail input {
+  border: 2px solid rgb(236, 241, 249);
+  border-radius: 2%;
+  padding: 2%;
+}
+
+.customer__formName input:focus,
+.customer__formPhone input:focus,
+.customer__formEmail input:focus {
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: rgb(86, 85, 208);
+  color: rgba(255, 255, 255, 0.93);
+  border-radius: 2%;
+  border: none;
+  position: relative;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.customer__header h1 {
+  font-weight: bold;
+}
+
+.customer__content {
+  display: grid;
+  place-items: center;
+}
+
+.customer__header > button {
+  background-color: rgb(84, 86, 208);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+.customer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 840px) {
+  .customer__header h1,
+  .customer__form h1 {
+    font-size: 160%;
+  }
+  .customer__header button {
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 696px) and (max-width: 839px) {
+  .customer__header h1,
+  .customer__form h1 {
+    font-size: 140%;
+  }
+  .customer__header button {
+    font-size: 70%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 695px) {
+  .customer__header h1,
+  .customer__form h1 {
+    font-size: 120%;
+  }
+  .customer__header button {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 499px) {
+  .customer__header h1,
+  .customer__form h1 {
+    font-size: 100%;
+  }
+  .customer__header button {
+    font-size: 30%;
+  }
+}
+
+@media (max-width: 299px) {
+  .customer__header h1,
+  .customer__form h1 {
+    font-size: 80%;
+  }
+  .customer__header button {
+    font-size: 20%;
+  }
+}
+
+@media (min-width: 970px) {
+  .customer__form form {
+    font-size: 90%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .customer__formName input,
+  .customer__formPhone input,
+  .customer__formEmail input {
+    font-size: 100% !important;
+  }
+  input[type="submit"] {
+    font-size: 100% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 969px) {
+  .customer__form form {
+    font-size: 80%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .customer__formName input,
+  .customer__formPhone input,
+  .customer__formEmail input {
+    font-size: 100% !important;
+  }
+  input[type="submit"] {
+    font-size: 100% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+  .customer__form form {
+    font-size: 70%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .customer__formName input,
+  .customer__formPhone input,
+  .customer__formEmail input {
+    font-size: 100% !important;
+  }
+  input[type="submit"] {
+    font-size: 90% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+  .customer__form form {
+    font-size: 60%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .customer__formName input,
+  .customer__formPhone input,
+  .customer__formEmail input {
+    font-size: 90% !important;
+  }
+  input[type="submit"] {
+    font-size: 80% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 499px) {
+  .customer__form form {
+    font-size: 50%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 90%;
+    display: inline-block;
+  }
+  .customer__formName input,
+  .customer__formPhone input,
+  .customer__formEmail input {
+    font-size: 70% !important;
+  }
+  input[type="submit"] {
+    font-size: 70% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 359px) {
+  .customer__form form {
+    font-size: 35%;
+    padding: 3%;
+    max-width: 95%;
+    min-width: 80%;
+    display: inline-block;
+  }
+  .customer__formName input,
+  .customer__formPhone input,
+  .customer__formEmail input {
+    font-size: 35% !important;
+  }
+  input[type="submit"] {
+    font-size: 50% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+.validInput {
+  /* border: 2px solid green !important; */
+  outline: none;
+  color: green;
+}
+
+.invalidInput {
+  /* border: 2px solid red !important; */
+  outline: none;
+  color: red;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.submitBtnDisabled {
+  background-color: lightgray !important;
+  cursor: not-allowed !important;
+}

@@ -1,0 +1,359 @@
+.invoice {
+  display: block;
+}
+
+.invoice__form {
+  display: block;
+}
+
+.invoice__form form h1 {
+  font-weight: bold;
+}
+
+.invoice__form form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+.invoice__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invoice__header h1 {
+  font-weight: bold;
+}
+
+.invoice__header button {
+  background-color: rgb(84, 86, 208);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+.invoice__formHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.invoice__formHeader h1 {
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  background-color: rgb(86, 85, 208);
+  color: rgba(255, 255, 255, 0.93);
+  border-radius: 5%;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.invoice__formRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.invoice__formRow:not(:last-child) {
+  padding-bottom: 5%;
+  border-bottom: 2px solid rgb(236, 241, 249);
+}
+
+.invoice__formRowCols {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 0.3;
+}
+
+.invoice__formData {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.invoice__form input,
+textarea {
+  border: 1px solid lightgray;
+}
+
+.invoice__formTable {
+  border-spacing: 0 0;
+}
+
+.invoice__formTable tr td {
+  border-bottom: 3px solid rgb(250, 251, 254);
+}
+
+.status__paid {
+  background-color: rgb(228, 248, 250);
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.status__issued {
+  background-color: rgb(246, 236, 207);
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.custBill__desc {
+  flex: 0.4;
+}
+
+.custBill__desc textarea {
+  width: 100% !important;
+  height: 120% !important;
+  padding: 2%;
+}
+
+.invoice__custBill {
+  display: inline-block;
+  background-color: #fff;
+  padding: 0 2% 2% 2%;
+  border: 2px solid rgb(236, 241, 249);
+}
+
+.custBill__header {
+  color: rgb(125, 123, 123);
+  margin-bottom: 5px;
+}
+
+.custBill__option {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.custBill__optionRight {
+  color: rgb(81, 77, 210);
+}
+
+.invoice__totalBill {
+  display: flex;
+  flex-direction: column;
+  flex: 0.6;
+  padding: 2%;
+  height: 140% !important;
+  background-color: #fff;
+  border: 1px solid lightblue;
+  overflow: auto;
+  margin-left: 40px;
+}
+
+.totalBill__desc {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.total__amount {
+  border-top: 1px solid #000;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.custBill__select,
+select {
+  width: 100%;
+  background: #5655d0;
+  color: white;
+  padding: 5px;
+  outline: none;
+  border: none;
+}
+
+@media (min-width: 840px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 160%;
+  }
+  .invoice__header button {
+    font-size: 90%;
+  }
+  input[type="submit"] {
+    font-size: 90% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 696px) and (max-width: 839px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 140%;
+  }
+  .invoice__header button {
+    font-size: 70%;
+  }
+  input[type="submit"] {
+    font-size: 70% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 695px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 120%;
+  }
+  .invoice__header button {
+    font-size: 50%;
+  }
+  input[type="submit"] {
+    font-size: 50% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 499px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 100%;
+  }
+  .invoice__header button {
+    font-size: 30%;
+  }
+  input[type="submit"] {
+    font-size: 30% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (max-width: 299px) {
+  .invoice__header h1,
+  .invoice__form h1 {
+    font-size: 80%;
+  }
+  .invoice__header button {
+    font-size: 20%;
+  }
+  input[type="submit"] {
+    font-size: 20% !important;
+    padding: 2% 2.5% !important;
+    min-width: initial !important;
+    min-height: initial !important;
+  }
+}
+
+@media (min-width: 970px) {
+  .invoice__form form {
+    font-size: 90% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 90% !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 969px) {
+  .invoice__form form {
+    font-size: 90% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 90% !important;
+  }
+  .total__amountLeft,
+  .total__amountRight {
+    font-size: 90% !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+  .invoice__form form {
+    font-size: 80% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 70% !important;
+  }
+}
+
+@media (min-width: 514px) and (max-width: 599px) {
+  .invoice__form form {
+    font-size: 65% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 60% !important;
+  }
+  .custBill__optionLeft {
+    font-size: 60% !important;
+  }
+  .custBill__optionRight,
+  .custBill__header {
+    font-size: 60% !important;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 513px) {
+  .invoice__form form {
+    font-size: 55% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 50% !important;
+  }
+  .custBill__optionLeft {
+    font-size: 50% !important;
+  }
+  .custBill__optionRight,
+  .custBill__header,
+  .invoice__formData {
+    font-size: 40% !important;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 359px) {
+  .invoice__form form {
+    font-size: 50% !important;
+  }
+  .invoice__form input,
+  textarea {
+    border: 1px solid lightgray;
+    padding: 1% 2%;
+    font-size: 40% !important;
+  }
+  .custBill__optionLeft {
+    font-size: 40% !important;
+  }
+  .custBill__optionRight,
+  .custBill__header,
+  .invoice__formData {
+    font-size: 30% !important;
+  }
+}

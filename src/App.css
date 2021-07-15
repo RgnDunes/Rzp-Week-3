@@ -1,0 +1,164 @@
+body {
+  background-color: rgb(229, 229, 229);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body {
+  display: grid;
+  place-items: center;
+  background-color: rgb(229, 229, 229);
+}
+
+@media (min-width: 840px) {
+  .container {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    align-items: flex-start;
+    justify-content: start;
+    border: 2px solid rgb(236, 241, 249);
+  }
+}
+
+@media (max-width: 839px) {
+  .container {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    display: flex;
+    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: start;
+  }
+}
+
+.container > .left {
+  width: 20%;
+  position: sticky;
+  background-color: #fff;
+  height: 100%;
+  top: 0;
+  border-right: 2px solid rgb(236, 241, 249);
+}
+
+.container > .left > a > h1 {
+  font-weight: normal;
+  transition: all 0.25s ease-in-out;
+  padding: 9%;
+}
+
+.container > .left > h1:hover {
+  border-left: 4px solid rgb(84, 86, 208);
+  padding-left: 5px;
+  color: rgb(84, 86, 208);
+  background-color: rgb(249, 251, 255);
+}
+
+.selected {
+  border-left: 4px solid rgb(84, 86, 208);
+  padding-left: 5px;
+  color: rgb(84, 86, 208);
+  background-color: rgb(249, 251, 255);
+}
+
+.container > .right {
+  width: 80%;
+  padding: 0 3%;
+  background-color: rgb(249, 251, 255);
+  overflow: scroll;
+  height: 100%;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0 13px;
+}
+
+tr:not(:first-child) {
+  background-color: rgb(255, 255, 255);
+}
+
+th {
+  padding: 15px 0;
+  line-height: 1.75;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 15px 0;
+  line-height: 1.75;
+  font-weight: normal;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 840px) {
+  th,
+  td {
+    font-size: 75%;
+  }
+
+  .container > .left > a > h1 {
+    font-size: 77%;
+  }
+}
+
+@media (min-width: 696px) and (max-width: 839px) {
+  th,
+  td {
+    font-size: 65%;
+  }
+
+  .container > .left > a > h1 {
+    font-size: 67%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 695px) {
+  th,
+  td {
+    font-size: 65%;
+  }
+
+  .container > .left > a > h1 {
+    font-size: 67%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 499px) {
+  th,
+  td {
+    font-size: 55%;
+  }
+
+  .container > .left > a > h1 {
+    font-size: 57%;
+  }
+}
+
+@media (max-width: 299px) {
+  th,
+  td {
+    font-size: 45%;
+  }
+
+  .container > .left > a > h1 {
+    font-size: 47%;
+  }
+}
